@@ -13,7 +13,6 @@ temp table以 # 開頭，並儲存於SQL Sever記憶體中，每次重啟時會�
 ```
 ```
 -- create table
--- create table
 CREATE TABLE [#tmp_people]
 (
 	id int,
