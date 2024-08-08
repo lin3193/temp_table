@@ -13,6 +13,7 @@ temp table以 # 開頭，並儲存於SQL Sever記憶體中，每次重啟時會�
 ```
 ```
 -- create table
+-- create table
 CREATE TABLE [#tmp_people]
 (
 	id int,
@@ -33,6 +34,10 @@ VALUES
 -- select 
 select * from #tmp_people
 
+-- select by target index
+select * from #tmp_people with(INDEX(IX_tmp_people_id))
+where age = 28
+
 -- drop
 DROP TABLE #tmp_people
 ```
@@ -40,5 +45,7 @@ DROP TABLE #tmp_people
 Result:
 ```
 1	Wang	20
+2	Lin	28
+---
 2	Lin	28
 ```
