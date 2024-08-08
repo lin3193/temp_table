@@ -34,7 +34,7 @@ VALUES
 select * from #tmp_people
 
 -- select by target index
-select * from #tmp_people with(INDEX(IX_tmp_people_id))
+select * from #tmp_people with(INDEX(IX_tmp_people_id_age))
 where age = 28
 
 -- drop
